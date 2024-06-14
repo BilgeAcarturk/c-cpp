@@ -1,0 +1,17 @@
+#include <stdio.h>
+int gcdof_two(int m,int n){
+    int GCD=1;
+    for (int i=1; i<=n && i<=m; i++){
+        if ((n%i==0 && m%i==0)){
+        GCD = i;
+        }
+    }
+    return GCD;
+}
+int main(){
+    int m, n, res;
+    printf("Enter two integers: \n");
+    scanf("%d %d", &m, &n);
+    res= gcdof_two(m, n);
+    printf("GCD of enteredn numbers: %d\n", res);
+}

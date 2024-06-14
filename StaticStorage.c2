@@ -1,0 +1,11 @@
+#include <stdio.h>
+void bilge(){
+    static int i=10; //yeni bir printledikten sonra en son kullandığı i değerini tekrar kullanıyor, başa dönmüyor. i=10 i=11 i=12 output alınır.
+    printf("i=%d\n", i);
+    i++;
+}
+int main(){
+    bilge();
+    bilge();
+    bilge();
+}

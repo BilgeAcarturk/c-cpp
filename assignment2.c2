@@ -1,0 +1,30 @@
+#include <stdio.h>
+void display(int a[],int m){
+    int i, j;
+    for(i=0; i<m; i++){
+        printf("%d\t", a[i]);
+    }
+}
+int main(){
+    int a[10], m, i, j, temp;
+    printf("Enter array size: ");
+    scanf("%d", &m);
+    printf("Enter %d elements: \n", m);
+    for(i=0; i<m; i++){
+        scanf("%d", &a[i]);
+    }
+
+    printf("Before sorting - array is: \n");
+    display(a, m);
+    for(i=0; i<m; i++){
+        for(j=i+1; j<m; j++){
+            if(a[i]<a[j]){
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+            }
+        }
+    }
+    printf("After sorting - array is: \n");
+    display(a, m);
+}
